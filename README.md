@@ -1,3 +1,3 @@
 # ProyectoFinal
 Practica final de programación
-TRATA DE VENTA DE TANQUES Y ARMAS DE DESTRUCCION
+El trabajo tratará de un restaurante
