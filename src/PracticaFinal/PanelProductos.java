@@ -36,6 +36,6 @@ class Productos{
     Productos(String nombre, int precio) {
         this.nombre = nombre;
         this.precio = precio;
-        boton=new JButton(nombre);//Hola bebe
+        boton=new JButton(nombre);
     }
 }
