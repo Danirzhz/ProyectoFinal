@@ -1,3 +1,4 @@
 # ProyectoFinal
 Practica final de programación
-El trabajo tratará de un restaurante
+El trabajo tratará de una Pescaderia la Juani
+
