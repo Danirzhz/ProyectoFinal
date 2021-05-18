@@ -1,4 +1,4 @@
 # ProyectoFinal
 Practica final de programación
-El trabajo tratará de una Pescaderia la Juani
+El trabajo tratará de un tpv de un restaurante
 
