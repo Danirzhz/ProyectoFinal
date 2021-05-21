@@ -1,24 +1,22 @@
 package PracticaFinal;
 
 import javax.swing.*;
-import java.util.List;
 
-public class PanelProductos {
-
-
-    private final JPanel panel;
-
-    public PanelProductos(JPanel panel) {
-        this.panel = panel;
-        List<MiBoton> botones;
-    }
+public class PanelFactura {
     public JPanel getPanel() {
         return panel;
     }
 
+    private final JPanel panel;
+
+
+    public PanelFactura(JPanel panel) {
+        this.panel = panel;
+    }
 
     public static void main(String[] args) {
         JFrame frame=new JFrame();
+
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
@@ -26,7 +24,4 @@ public class PanelProductos {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-
-
 }
-
