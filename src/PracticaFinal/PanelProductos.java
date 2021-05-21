@@ -1,16 +1,17 @@
 package PracticaFinal;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PanelProductos {
 
 
     private final JPanel panel;
-
+    private final ArrayList<MiBoton> botones=new ArrayList<>();
     public PanelProductos(JPanel panel) {
         this.panel = panel;
-        List<MiBoton> botones;
+
     }
     public JPanel getPanel() {
         return panel;

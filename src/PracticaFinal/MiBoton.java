@@ -25,12 +25,5 @@ public class MiBoton {
     public int getPrecio(){
         return precio;
     }
-    private void rellenaBotonFichero() throws IOException {
-        List<String> lineas= Files.readAllLines(Paths.get("productos.csv"));
-        for (String s :
-                lineas) {
-            String[] campos=s.split(":");
-            MiBoton boton=new MiBoton(campos[0],Integer.parseInt(String.valueOf(precio)));
-        }
-    }
+
 }
