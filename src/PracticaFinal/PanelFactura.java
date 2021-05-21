@@ -16,10 +16,13 @@ public class PanelFactura {
 
     public static void main(String[] args) {
         JFrame frame=new JFrame();
+        JTextArea area = new JTextArea();
+        JButton boton = new JButton("Ticket");
+
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-
+        frame.add(area);
+        frame.add(boton);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RellenaBotones {
+public class RellenaBotonesProductos {
 
     public static List<String> rellenarBotones() throws IOException {
         List<String> lineas = Files.readAllLines(Paths.get("productos.csv"));
