@@ -1,6 +1,7 @@
 package PracticaFinal;
 
 import javax.swing.*;
+import java.util.List;
 
 public class PanelProductos {
 
@@ -10,6 +11,7 @@ public class PanelProductos {
     public PanelProductos(JPanel panel) {
         this.panel = panel;
 
+        List<MiBoton> botones;
     }
     public JPanel getPanel() {
         return panel;
@@ -28,14 +30,4 @@ public class PanelProductos {
 
 
 }
-class Productos{
-    private final String nombre;
-    private final int precio;
-    private final JButton boton;
 
-    Productos(String nombre, int precio) {
-        this.nombre = nombre;
-        this.precio = precio;
-        boton=new JButton(nombre);
-    }
-}
