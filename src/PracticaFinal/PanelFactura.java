@@ -1,6 +1,7 @@
 package PracticaFinal;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PanelFactura {
@@ -15,7 +16,6 @@ public class PanelFactura {
         this.panel = panel;
     }
 
-    //ActionListener
 
     public static void main(String[] args) {
         JFrame frame=new JFrame();
@@ -29,5 +29,12 @@ public class PanelFactura {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+        boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }
