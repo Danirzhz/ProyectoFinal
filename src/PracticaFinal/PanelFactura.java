@@ -33,6 +33,7 @@ public class PanelFactura {
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Aquí ira el boton del recibo para hacer la factura
 
             }
         });
