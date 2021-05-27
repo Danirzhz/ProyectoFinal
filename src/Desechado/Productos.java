@@ -1,4 +1,4 @@
-package PracticaFinal;
+package Desechado;
 
 import javax.swing.*;
 
