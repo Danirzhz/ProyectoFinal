@@ -5,13 +5,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+
 //Este es el boton del producto
-public class MiBotonProducto {
+
+public class Producto {
     private final String nombre;
     private  final JButton boton;
     private final int precio;
 
-    public MiBotonProducto(String nombre, int cantidad) {
+    public Producto(String nombre, int cantidad) {
         this.nombre = nombre;
         this.precio = cantidad;
         boton=new JButton(nombre);
@@ -25,6 +27,11 @@ public class MiBotonProducto {
     public int getPrecio(){
         return precio;
     }
+
+    public static void main(String[] args) {
+
+    }
+
 
 
 }

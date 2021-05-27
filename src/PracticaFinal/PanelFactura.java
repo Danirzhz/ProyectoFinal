@@ -1,6 +1,7 @@
 package PracticaFinal;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //Este panel será mi panel central en el que se mostrará los productos  que hemos seleccionado y tendrá un boton
@@ -19,24 +20,27 @@ public class PanelFactura {
 
 
     public static void main(String[] args) {
-        JFrame frame=new JFrame();
-        JTextField area = new JTextField();
-        JButton boton = new JButton("Ticket");
+        JFrame frame=new JFrame("Factura");
+        JPanel panel = new JPanel(new GridLayout(2,1,10,10));
+        JTextArea area = new JTextArea(5,2);
+        JButton ticket = new JButton("Factura");
+
+        frame.add(panel);
+
+        panel.add(area);
+        panel.add(ticket);
+
+
+
+        ticket.addActionListener(e -> {});//Accion de la factura
+
+
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.add(area);
-        frame.add(boton);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-        boton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //Aquí irá el boton del recibo para hacer el tiquet
-
-            }
-        });
     }
 }
