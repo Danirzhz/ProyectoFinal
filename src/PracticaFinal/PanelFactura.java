@@ -2,33 +2,33 @@ package PracticaFinal;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 //Este panel será mi panel central en el que se mostrará los productos  que hemos seleccionado y tendrá un boton
 // que los sumará
-public class PanelFactura {
+public class PanelFactura  {
 
-    private final JPanel panel;
+    private static JPanel panelFactura;
 
-    public JPanel getPanel() {
-        return panel;
+    public JPanel getPanelFactura() {
+        return panelFactura;
     }
 
     public PanelFactura(JPanel panel) {
-        this.panel = panel;
+        this.panelFactura = panel;
     }
 
 
     public static void main(String[] args) {
-        JFrame frame=new JFrame("Factura");
-        JPanel panel = new JPanel(new GridLayout(2,1,10,10));
-        JTextArea area = new JTextArea(5,2);
-        JButton ticket = new JButton("Factura");
 
-        frame.add(panel);
+         JFrame frame=new JFrame("Factura");
+         panelFactura = new JPanel(new GridLayout(2,1));
+         JTextArea area = new JTextArea(3,2);
+         JButton ticket = new JButton("Tiquet");
 
-        panel.add(area);
-        panel.add(ticket);
+        frame.add(panelFactura);
+
+        panelFactura.add(area);
+        panelFactura.add(ticket);
 
 
 

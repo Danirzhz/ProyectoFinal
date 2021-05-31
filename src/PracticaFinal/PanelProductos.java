@@ -7,24 +7,26 @@ import java.util.List;
 //Panel izquierdo en el que iran todos los productos como botones , los botones con imagenes
 public class PanelProductos {
 
-
-    private final JPanel panel;
+    public static JPanel panelProductos;
     private final List<Producto> botones=new ArrayList<>();
 
     public PanelProductos(JPanel panel) {
-        this.panel = panel;
+        this.panelProductos = panel;
     }
     public JPanel getPanel() {
-        return panel;
+        return panelProductos;
     }
-//for each 
+//for each
 
     public void anyadirBoton(){
-
-
     }
+
     public static void main(String[] args) {
         JFrame frame=new JFrame();
+        panelProductos = new JPanel();
+
+
+
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         frame.pack();
