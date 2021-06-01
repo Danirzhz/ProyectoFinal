@@ -11,10 +11,6 @@ public class FramePrincipal {
     }
 
 
-    public void anyadePanel(JPanel panel){
-        framePrincipal.add(panel);
-    }
-
     public static void main(String[] args) {
         JFrame framePrincipal=new JFrame();
 

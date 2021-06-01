@@ -4,14 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 //Este panel será mi panel derecho con acciones de sacar la media de los productos y demás
-public class PanelAcciones extends FramePrincipal{
+public class PanelAcciones {
 
 
     private static JPanel panelAcciones;
 
-    public PanelAcciones(JFrame framePrincipal) {
-        super(framePrincipal);
-    }
 
 
     public static JPanel getPanelAcciones() {
