@@ -9,13 +9,13 @@ public class PanelFactura  {
 
     private static JPanel panelFactura;
 
+    public PanelFactura() {
+    }
+
     public JPanel getPanelFactura() {
         return panelFactura;
     }
 
-    public PanelFactura(JPanel panel) {
-        this.panelFactura = panel;
-    }
 
 
     public static void main(String[] args) {
@@ -26,6 +26,7 @@ public class PanelFactura  {
          JButton ticket = new JButton("Tiquet");
 
         frame.add(panelFactura);
+
 
         panelFactura.add(area);
         panelFactura.add(ticket);
@@ -38,7 +39,7 @@ public class PanelFactura  {
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
+        frame.setSize(300,200);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 

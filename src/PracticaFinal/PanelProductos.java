@@ -10,9 +10,9 @@ public class PanelProductos {
     public static JPanel panelProductos;
     private final List<Producto> botones=new ArrayList<>();
 
-    public PanelProductos(JPanel panel) {
-        this.panelProductos = panel;
+    public PanelProductos() {
     }
+
     public JPanel getPanel() {
         return panelProductos;
     }
@@ -29,7 +29,7 @@ public class PanelProductos {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        frame.pack();
+        frame.setSize(300,200);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
