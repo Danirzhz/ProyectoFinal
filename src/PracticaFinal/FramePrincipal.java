@@ -3,20 +3,35 @@ package PracticaFinal;
 import javax.swing.*;
 
 //Este será el frame en el que añadire todos los paneles
-public class FramePrincipal {
+import PracticaFinal.PanelAcciones;
 
+import java.awt.*;
 
-    private JFrame framePrincipal;
+public class FramePrincipal extends JPanel {
+
+        private static JFrame framePrincipal;
+
 
     public static void main(String[] args) {
-        JFrame framePrincipal=new JFrame();
-        PanelAcciones panelAcciones= new PanelAcciones();
+        framePrincipal=new JFrame();
+        JPanel panelPrincipal= new JPanel(new GridLayout(1,3));
+        PanelAcciones panelAccion = new PanelAcciones();
+        PanelFactura panelFac = new PanelFactura();
+        PanelProductos panelPro = new PanelProductos();
 
-        framePrincipal.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //panelPrincipal.add(tres.componentesPanelPro());
+        panelPrincipal.add(panelFac.componentesPanelFact());
+        panelPrincipal.add(panelAccion.componentesPanelAcciones());
 
-       // framePrincipal.add(panelAcciones); Crear un constructor para cada panel e inicializarlo aquí y añadirlo al frame
-        framePrincipal.pack();
+
+
+        framePrincipal.add(panelPrincipal);
+        framePrincipal.setSize(500,500);
         framePrincipal.setLocationRelativeTo(null);
         framePrincipal.setVisible(true);
+        framePrincipal.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
     }
+
+
 }

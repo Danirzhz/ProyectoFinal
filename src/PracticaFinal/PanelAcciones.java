@@ -7,20 +7,17 @@ import java.awt.*;
 public class PanelAcciones {
 
 
-    private static JPanel panelAcciones;
+
 
     public PanelAcciones() {
+        componentesPanelAcciones();
     }
 
-
-    public static JPanel getPanelAcciones() {
-        return panelAcciones;
-    }
 
     public static void main(String[] args) {
 
         JFrame frame=new JFrame();
-        panelAcciones=new JPanel(new GridLayout(3,5,10,10));
+        JPanel panelAcciones=new JPanel(new GridLayout(3,5,10,10));
         JButton boton1 = new JButton("Accion 1");
         JButton boton2 = new JButton("Accion 2");
         JButton boton3 = new JButton("Accion 3");
@@ -39,8 +36,9 @@ public class PanelAcciones {
         frame.setVisible(true);
 
     }
-    private void componentesAcciones(){
-        panelAcciones=new JPanel(new GridLayout(3,5,10,10));
+    public JPanel componentesPanelAcciones(){
+
+        JPanel panelAcciones=new JPanel(new GridLayout(3,5,10,10));
         JButton boton1 = new JButton("Accion 1");
         JButton boton2 = new JButton("Accion 2");
         JButton boton3 = new JButton("Accion 3");
@@ -48,7 +46,8 @@ public class PanelAcciones {
         panelAcciones.add(boton1);
         panelAcciones.add(boton2);
         panelAcciones.add(boton3);
+        panelAcciones.setBackground(Color.BLUE);
 
-
+        return panelAcciones;
     }
 }

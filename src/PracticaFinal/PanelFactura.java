@@ -10,6 +10,7 @@ public class PanelFactura  {
     private static JPanel panelFactura;
 
     public PanelFactura() {
+        componentesPanelFact();
     }
 
     public JPanel getPanelFactura() {
@@ -43,5 +44,15 @@ public class PanelFactura  {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
+    }
+    public Component componentesPanelFact(){
+
+        panelFactura = new JPanel(new GridLayout(2,1));
+        JTextArea area = new JTextArea(3,2);
+        JButton ticket = new JButton("Tiquet");
+
+        panelFactura.add(area);
+        panelFactura.add(ticket);
+        return panelFactura;
     }
 }

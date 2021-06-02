@@ -8,15 +8,15 @@ import java.util.List;
 //Con esta clase rellenaremos los botones de la clase MiBotonProducto con los nombres
 public class RellenaBotonesProductos {
 
-    public static List<String> rellenarBotones() throws IOException {
-        List<String> salida = new ArrayList<>();
+    public static List<Producto> rellenarBotones() throws IOException {
+        List<Producto> salida = new ArrayList<>();
         List<String> lineas = Files.readAllLines(Paths.get("productos.csv"));
         for (String s :
                 lineas) {
             String[] campos=s.split(":");
             int precio = Integer.parseInt(campos[1]);
-            Producto boton=new Producto(campos[0],precio);
-            salida.add(String.valueOf(boton));
+            Producto producto=new Producto(campos[0],precio);
+            salida.add(producto);
         }
         return salida;
     }
