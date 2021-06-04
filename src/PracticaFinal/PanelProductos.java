@@ -1,6 +1,7 @@
 package PracticaFinal;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,6 @@ public class PanelProductos {
 
     public PanelProductos()  {
         componentesPanelPro();
-        anyadirBoton();
     }
 
     public JPanel getPanel() {
@@ -38,22 +38,20 @@ public class PanelProductos {
         frame.setVisible(true);
 
     }
-    public void componentesPanelPro(){
+    public Component componentesPanelPro(){
         panelProductos = new JPanel();
-    }
-
-    public void anyadirBoton()  {
         try {
             this.botonProducto=RellenaBotonesProductos.rellenarBotones();
+            for (Producto p :
+                    this.botonProducto) {
+                JButton boton = new JButton(p.getNombre());
+                panelProductos.add(boton);
+            }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        for (Producto p :
-                this.botonProducto) {
-            JButton boton = new JButton(p.getNombre());
-            panelProductos.add(boton);
-        }
 
+        }
+        return panelProductos;
     }
 }
 

@@ -19,7 +19,7 @@ public class FramePrincipal extends JPanel {
         PanelFactura panelFac = new PanelFactura();
         PanelProductos panelPro = new PanelProductos();
 
-        //panelPrincipal.add(tres.componentesPanelPro());
+        panelPrincipal.add(panelPro.componentesPanelPro());
         panelPrincipal.add(panelFac.componentesPanelFact());
         panelPrincipal.add(panelAccion.componentesPanelAcciones());
 
