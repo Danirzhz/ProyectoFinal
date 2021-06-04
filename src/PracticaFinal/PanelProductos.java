@@ -38,7 +38,7 @@ public class PanelProductos {
         frame.setVisible(true);
 
     }
-    public Component componentesPanelPro(){
+    public JPanel componentesPanelPro(){
         panelProductos = new JPanel();
         try {
             this.botonProducto=RellenaBotonesProductos.rellenarBotones();
