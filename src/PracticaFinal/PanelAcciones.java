@@ -31,14 +31,14 @@ public class PanelAcciones {
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(300,200);
+        frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }
     public JPanel componentesPanelAcciones(){
 
-        JPanel panelAcciones=new JPanel(new GridLayout(3,5,10,10));
+        JPanel panelAcciones=new JPanel(new GridLayout(3,5,20,20));
         JButton boton1 = new JButton("Accion 1");
         JButton boton2 = new JButton("Accion 2");
         JButton boton3 = new JButton("Accion 3");

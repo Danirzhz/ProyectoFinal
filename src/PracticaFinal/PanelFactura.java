@@ -7,7 +7,22 @@ import java.awt.*;
 // que los sumará
 public class PanelFactura  {
 
-    private static JPanel panelFactura;
+   private JPanel panelFactura;
+   private JTextArea areaDeTexto;
+
+    public void setPanelFactura(JPanel panelFactura) {
+        this.panelFactura = panelFactura;
+    }
+
+    public JTextArea getAreaDeTexto() {
+        return areaDeTexto;
+    }
+
+    public void setAreaDeTexto() {
+        this.areaDeTexto = areaDeTexto;
+    }
+
+
 
     public PanelFactura() {
         componentesPanelFact();
@@ -22,7 +37,7 @@ public class PanelFactura  {
     public static void main(String[] args) {
 
          JFrame frame=new JFrame("Factura");
-         panelFactura = new JPanel(new GridLayout(2,1));
+         JPanel panelFactura = new JPanel(new GridLayout(2,1));
          JTextArea area = new JTextArea(3,2);
          JButton ticket = new JButton("Tiquet");
 
@@ -40,19 +55,24 @@ public class PanelFactura  {
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(300,200);
+        frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }
     public Component componentesPanelFact(){
 
-        panelFactura = new JPanel(new GridLayout(2,1));
+        panelFactura = new JPanel(new GridLayout(2,1,10,10));
         JTextArea area = new JTextArea(3,2);
         JButton ticket = new JButton("Tiquet");
 
         panelFactura.add(area);
+
         panelFactura.add(ticket);
         return panelFactura;
     }
+    public  void anyadeProductos(Producto producto){
+        areaDeTexto.setText(areaDeTexto.getText()+producto.getNombre());
+    }
+
 }

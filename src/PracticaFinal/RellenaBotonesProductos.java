@@ -13,24 +13,25 @@ public class RellenaBotonesProductos {
         List<String> lineas = Files.readAllLines(Paths.get("productos.csv"));
         for (String s :
                 lineas) {
-            String[] campos=s.split(":");
+            String[] campos = s.split(":");
             int precio = Integer.parseInt(campos[1]);
-            Producto producto=new Producto(campos[0],precio);
+            Producto producto = new Producto(campos[0], precio);
             salida.add(producto);
         }
         return salida;
     }
 
+    public static String anyadirNombre() throws IOException {
+        String nombreProducto =null;
+        List<String> path = Files.readAllLines(Paths.get("productos.csv"));
+        for (String s: path) {
+            String [] campos =s.split(":");
+            String nombre =campos[0];
+             nombreProducto=nombre;
 
-    /*public static List<String> rellenarBotones() throws IOException {
-        List<String> lineas = Files.readAllLines(Paths.get("productos.csv"));
-        for (String s :
-                lineas) {
-            String[] campos=s.split(":");
-            int precio = 0;
-            Producto boton=new Producto(campos[0],Integer.parseInt(String.valueOf(precio)));
-            lineas.add(String.valueOf(boton));
         }
-        return lineas;
-    }*/
+        return nombreProducto;
+
+    }
+
 }

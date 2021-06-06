@@ -2,6 +2,8 @@ package PracticaFinal;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +18,16 @@ public class PanelProductos {
 
     public PanelProductos()  {
         componentesPanelPro();
+
     }
 
     public JPanel getPanel() {
         return panelProductos;
     }
-//for each
     public static void main(String[] args) throws IOException {
         JFrame frame=new JFrame();
         JPanel panelProductos = new JPanel();
-
+        PanelFactura panelFactura = new PanelFactura();
 
 
 
@@ -33,25 +35,42 @@ public class PanelProductos {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
-        frame.setSize(300,200);
+        frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }
+
     public JPanel componentesPanelPro(){
-        panelProductos = new JPanel();
+        panelProductos = new JPanel(new GridLayout(6,2,20,20));
+        PanelFactura panelFactura = new PanelFactura();
         try {
             this.botonProducto=RellenaBotonesProductos.rellenarBotones();
             for (Producto p :
                     this.botonProducto) {
                 JButton boton = new JButton(p.getNombre());
+
+                boton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            RellenaBotonesProductos.anyadirNombre();
+                        } catch (IOException ioException) {
+                            ioException.printStackTrace();
+                        }
+                    }
+                });
                 panelProductos.add(boton);
             }
+
         } catch (Exception e) {
             e.printStackTrace();
 
         }
         return panelProductos;
     }
+
+
+
 }
 
