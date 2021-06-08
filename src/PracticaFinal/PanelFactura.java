@@ -18,7 +18,7 @@ public class PanelFactura  {
         return areaDeTexto;
     }
 
-    public void setAreaDeTexto() {
+    public void setAreaDeTexto(String nombre) {
         this.areaDeTexto = areaDeTexto;
     }
 
@@ -38,13 +38,13 @@ public class PanelFactura  {
 
          JFrame frame=new JFrame("Factura");
          JPanel panelFactura = new JPanel(new GridLayout(2,1));
-         JTextArea area = new JTextArea(3,2);
+         JTextArea areaDeTexto = new JTextArea(3,2);
          JButton ticket = new JButton("Tiquet");
 
         frame.add(panelFactura);
 
 
-        panelFactura.add(area);
+        panelFactura.add(areaDeTexto);
         panelFactura.add(ticket);
 
 
@@ -60,19 +60,16 @@ public class PanelFactura  {
         frame.setVisible(true);
 
     }
-    public Component componentesPanelFact(){
+    public JPanel componentesPanelFact(){
 
         panelFactura = new JPanel(new GridLayout(2,1,10,10));
-        JTextArea area = new JTextArea(3,2);
+        areaDeTexto = new JTextArea(3,2);
         JButton ticket = new JButton("Tiquet");
 
-        panelFactura.add(area);
-
+        panelFactura.add(areaDeTexto);
         panelFactura.add(ticket);
+
         return panelFactura;
-    }
-    public  void anyadeProductos(Producto producto){
-        areaDeTexto.setText(areaDeTexto.getText()+producto.getNombre());
     }
 
 }

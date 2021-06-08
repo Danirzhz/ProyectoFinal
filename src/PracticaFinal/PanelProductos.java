@@ -12,7 +12,7 @@ import java.util.List;
 //Panel izquierdo en el que iran todos los productos como botones , los botones con imagenes
 public class PanelProductos {
 
-    public JPanel panelProductos;
+    private JPanel panelProductos;
     private List<Producto> botonProducto= new ArrayList<>();
 
 
@@ -49,14 +49,16 @@ public class PanelProductos {
             for (Producto p :
                     this.botonProducto) {
                 JButton boton = new JButton(p.getNombre());
-
+                String nombre;
+                nombre=p.getNombre();
                 boton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-
+                    panelFactura.setAreaDeTexto(nombre);        // No lo está añadiendo
                     }
                 });
                 panelProductos.add(boton);
+
             }
 
         } catch (Exception e) {
