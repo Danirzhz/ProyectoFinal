@@ -1,5 +1,6 @@
 package PracticaFinal;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,7 +16,8 @@ public class RellenaBotonesProductos {
                 lineas) {
             String[] campos = s.split(":");
             int precio = Integer.parseInt(campos[1]);
-            Producto producto = new Producto(campos[0], precio);
+
+            Producto producto = new Producto(campos[0], precio,campos[2]); //Yo le paso el nombre de la imagen como string
             salida.add(producto);
         }
         return salida;

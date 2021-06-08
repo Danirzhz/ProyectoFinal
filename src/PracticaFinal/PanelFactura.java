@@ -26,6 +26,7 @@ public class PanelFactura  {
 
     public PanelFactura() {
         componentesPanelFact();
+
     }
 
     public JPanel getPanelFactura() {
@@ -40,7 +41,7 @@ public class PanelFactura  {
          JPanel panelFactura = new JPanel(new GridLayout(2,1));
          JTextArea areaDeTexto = new JTextArea(3,2);
          JButton ticket = new JButton("Tiquet");
-
+         String s= areaDeTexto.getText();
         frame.add(panelFactura);
 
 
@@ -49,7 +50,7 @@ public class PanelFactura  {
 
 
 
-        ticket.addActionListener(e -> {});//Accion de la factura
+       ticket.addActionListener(e -> {imprimirTicket(s);});//Accion de la factura
 
 
 
@@ -64,12 +65,29 @@ public class PanelFactura  {
 
         panelFactura = new JPanel(new GridLayout(2,1,10,10));
         areaDeTexto = new JTextArea(3,2);
-        JButton ticket = new JButton("Tiquet");
 
+        JButton ticket = new JButton("Tiquet");
+        String s= areaDeTexto.getText();
+        ticket.addActionListener(e -> {imprimirTicket(s);}); //Imprimir ticket
         panelFactura.add(areaDeTexto);
         panelFactura.add(ticket);
 
         return panelFactura;
     }
+        //Para imprimir ticket
+
+    static void imprimirTicket(String s){
+        JTextPane jtp = new JTextPane();
+        jtp.setBackground(Color.white);
+        jtp.setFont(new Font("Courier New",Font.BOLD,16));
+        jtp.setText(s);
+        boolean show = true;
+        try {
+            jtp.print(null, null, show, null, null, show);
+        } catch (java.awt.print.PrinterException ex) {
+            ex.printStackTrace();
+        }
+    }
+
 
 }

@@ -48,16 +48,22 @@ public class PanelProductos {
             this.botonProducto=RellenaBotonesProductos.rellenarBotones();
             for (Producto p :
                     this.botonProducto) {
-                JButton boton = new JButton(p.getNombre());
+                //Le paso el nombre de la imagen como string y después me creo el boton con ese nombre , no se porqué no funciona
+                ImageIcon imagen = new ImageIcon(p.getImagen());
+                JButton boton = new JButton(imagen);
+                // JButton boton = new JButton(p.getNombre());
+
                 String nombre;
                 nombre=p.getNombre();
                 boton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                    panelFactura.setAreaDeTexto(nombre);        // No lo está añadiendo
+                        // No está añadiendo el nombre al area de texto y no sé porqué
+                    panelFactura.setAreaDeTexto(nombre);
                     }
                 });
                 panelProductos.add(boton);
+
 
             }
 
