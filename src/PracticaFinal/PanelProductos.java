@@ -49,7 +49,7 @@ public class PanelProductos {
             for (Producto p :
                     this.botonProducto) {
                 //Le paso el nombre de la imagen como string y después me creo el boton con ese nombre , no se porqué no funciona
-                ImageIcon imagen = new ImageIcon(p.getImagen());
+                ImageIcon imagen = new ImageIcon(p.getStringImagen());
                 JButton boton = new JButton(imagen);
                 // JButton boton = new JButton(p.getNombre());
 

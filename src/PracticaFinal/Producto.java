@@ -1,7 +1,6 @@
 package PracticaFinal;
 
 import javax.swing.*;
-import java.awt.*;
 
 //Este es el boton del producto
 
@@ -9,7 +8,7 @@ public class Producto {
     private final String nombre;
     private final JButton boton;
     private final int precio;
-    private final String imagen;
+    private final String stringImagen;
 
 
 
@@ -17,12 +16,12 @@ public class Producto {
         this.nombre = nombre;
         this.precio = cantidad;
         this.boton= new JButton(nombre);
-        this.imagen=imagen;
+        this.stringImagen =imagen;
 
     }
 
 
-    public String getImagen(){return imagen;}
+    public String getStringImagen(){return stringImagen;}
     public int getPrecio(){
         return precio;
     }
