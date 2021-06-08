@@ -53,11 +53,7 @@ public class PanelProductos {
                 boton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        try {
-                            RellenaBotonesProductos.anyadirNombre();
-                        } catch (IOException ioException) {
-                            ioException.printStackTrace();
-                        }
+
                     }
                 });
                 panelProductos.add(boton);

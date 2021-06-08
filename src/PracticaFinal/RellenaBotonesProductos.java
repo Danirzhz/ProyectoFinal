@@ -20,18 +20,6 @@ public class RellenaBotonesProductos {
         }
         return salida;
     }
-
-    public static String anyadirNombre() throws IOException {
-        String nombreProducto =null;
-        List<String> path = Files.readAllLines(Paths.get("productos.csv"));
-        for (String s: path) {
-            String [] campos =s.split(":");
-            String nombre =campos[0];
-             nombreProducto=nombre;
-
-        }
-        return nombreProducto;
-
-    }
-
 }
+
+
