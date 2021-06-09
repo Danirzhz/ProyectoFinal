@@ -55,12 +55,9 @@ public class PanelProductos {
 
                 String nombre;
                 nombre=p.getNombre();
-                boton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // No está añadiendo el nombre al area de texto y no sé porqué
+                boton.addActionListener(e1 -> {
+                    // No está añadiendo el nombre al area de texto y no sé porqué
                     panelFactura.setAreaDeTexto(nombre);
-                    }
                 });
                 panelProductos.add(boton);
 
