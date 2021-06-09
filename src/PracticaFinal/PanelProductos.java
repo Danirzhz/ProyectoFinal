@@ -49,8 +49,10 @@ public class PanelProductos {
             for (Producto p :
                     this.botonProducto) {
                 //Le paso el nombre de la imagen como string y después me creo el boton poniendo la imagen
+
                 ImageIcon imagen = new ImageIcon((p.getImagen()));
                 JButton boton = new JButton(imagen);
+
                 // JButton boton = new JButton(p.getNombre());
 
                 String nombre;
@@ -60,8 +62,6 @@ public class PanelProductos {
                     panelFactura.setAreaDeTexto(nombre);
                 });
                 panelProductos.add(boton);
-
-
             }
 
         } catch (Exception e) {
