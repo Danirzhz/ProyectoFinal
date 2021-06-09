@@ -17,7 +17,7 @@ public class RellenaBotonesProductos {
             String[] campos = s.split(":");
             int precio = Integer.parseInt(campos[1]);
 
-            Producto producto = new Producto(campos[0], precio,campos[2]); //Yo le paso el nombre de la imagen como string
+            Producto producto = new Producto(campos[0], precio,campos[2]); //
             salida.add(producto);
         }
         return salida;
