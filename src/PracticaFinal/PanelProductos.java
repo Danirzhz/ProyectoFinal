@@ -14,9 +14,11 @@ public class PanelProductos {
 
     private JPanel panelProductos;
     private List<Producto> botonProducto= new ArrayList<>();
+    PanelFactura panelFactura;
 
 
-    public PanelProductos()  {
+    public PanelProductos(PanelFactura panelFactura)  {
+        this.panelFactura = panelFactura;
         componentesPanelPro();
 
     }
@@ -43,7 +45,6 @@ public class PanelProductos {
 
     public JPanel componentesPanelPro(){
         panelProductos = new JPanel(new GridLayout(6,2,20,20));
-        PanelFactura panelFactura = new PanelFactura();
         try {
             this.botonProducto=RellenaBotonesProductos.rellenarBotones();
             for (Producto p :
@@ -56,10 +57,15 @@ public class PanelProductos {
                 // JButton boton = new JButton(p.getNombre());
 
                 String nombre;
+                int precio;
+                precio=p.getPrecio();
                 nombre=p.getNombre();
                 boton.addActionListener(e1 -> {
                     // No está añadiendo el nombre al area de texto y no sé porqué
-                    panelFactura.setAreaDeTexto(nombre);
+                    String textoAnterior;
+                    textoAnterior=panelFactura.pedirAreaTexto().getText();
+                    panelFactura.pedirAreaTexto().setText(nombre +" "+ precio +"\n"+textoAnterior);
+
                 });
                 panelProductos.add(boton);
             }

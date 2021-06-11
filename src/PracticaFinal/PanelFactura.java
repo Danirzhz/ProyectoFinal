@@ -65,10 +65,11 @@ public class PanelFactura  {
 
         panelFactura = new JPanel(new GridLayout(2,1,10,10));
         areaDeTexto = new JTextArea(3,2);
-
         JButton ticket = new JButton("Tiquet");
+
         String s= areaDeTexto.getText();
         ticket.addActionListener(e -> {imprimirTicket(s);}); //Imprimir ticket
+
         panelFactura.add(areaDeTexto);
         panelFactura.add(ticket);
 
@@ -87,6 +88,10 @@ public class PanelFactura  {
         } catch (java.awt.print.PrinterException ex) {
             ex.printStackTrace();
         }
+    }
+    public JTextArea pedirAreaTexto(){
+
+        return areaDeTexto;
     }
 
 
