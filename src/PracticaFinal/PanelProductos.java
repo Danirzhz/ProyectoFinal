@@ -63,8 +63,8 @@ public class PanelProductos {
                 boton.addActionListener(e1 -> {
                     // No está añadiendo el nombre al area de texto y no sé porqué
                     String textoAnterior;
-                    textoAnterior=panelFactura.pedirAreaTexto().getText();
-                    panelFactura.pedirAreaTexto().setText(nombre +" "+ precio +"\n"+textoAnterior);
+                    textoAnterior=panelFactura.getAreaDeTexto().getText();
+                    panelFactura.getAreaDeTexto().setText(nombre +" "+ precio +"\n"+textoAnterior);
 
                 });
                 panelProductos.add(boton);

@@ -10,17 +10,12 @@ public class PanelFactura  {
    private JPanel panelFactura;
    private JTextArea areaDeTexto;
 
-    public void setPanelFactura(JPanel panelFactura) {
-        this.panelFactura = panelFactura;
-    }
+
 
     public JTextArea getAreaDeTexto() {
         return areaDeTexto;
     }
 
-    public void setAreaDeTexto(String nombre) {
-        this.areaDeTexto = areaDeTexto;
-    }
 
 
 
@@ -67,7 +62,7 @@ public class PanelFactura  {
         areaDeTexto = new JTextArea(3,2);
         JButton ticket = new JButton("Tiquet");
 
-        String s= areaDeTexto.getText();
+        String s= getAreaDeTexto().getText();
         ticket.addActionListener(e -> {imprimirTicket(s);}); //Imprimir ticket
 
         panelFactura.add(areaDeTexto);
@@ -89,10 +84,7 @@ public class PanelFactura  {
             ex.printStackTrace();
         }
     }
-    public JTextArea pedirAreaTexto(){
 
-        return areaDeTexto;
-    }
 
 
 }
