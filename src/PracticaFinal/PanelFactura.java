@@ -2,6 +2,9 @@ package PracticaFinal;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 //Este panel será mi panel central en el que se mostrará los productos  que hemos seleccionado y tendrá un boton
 // que los sumará
@@ -9,8 +12,6 @@ public class PanelFactura  {
 
    private JPanel panelFactura;
    private JTextArea areaDeTexto;
-
-
 
     public JTextArea getAreaDeTexto() {
         return areaDeTexto;
@@ -23,50 +24,18 @@ public class PanelFactura  {
         componentesPanelFact();
 
     }
-
-    public JPanel getPanelFactura() {
-        return panelFactura;
-    }
-
-
-
-    public static void main(String[] args) {
-
-         JFrame frame=new JFrame("Factura");
-         JPanel panelFactura = new JPanel(new GridLayout(2,1));
-         JTextArea areaDeTexto = new JTextArea(3,2);
-         JButton ticket = new JButton("Tiquet");
-         String s= areaDeTexto.getText();
-        frame.add(panelFactura);
-
-
-        panelFactura.add(areaDeTexto);
-        panelFactura.add(ticket);
-
-
-
-       ticket.addActionListener(e -> {imprimirTicket(s);});//Accion de la factura
-
-
-
-
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-
-    }
     public JPanel componentesPanelFact(){
 
         panelFactura = new JPanel(new GridLayout(2,1,10,10));
         areaDeTexto = new JTextArea(3,2);
         JButton ticket = new JButton("Tiquet");
 
-        String s= areaDeTexto.getText();
-        ticket.addActionListener(e -> {imprimirTicket(s);}); //Imprimir ticket
-
         panelFactura.add(areaDeTexto);
+
+
         panelFactura.add(ticket);
+
+        ticket.addActionListener(e -> {imprimirTicket(areaDeTexto.getText());}); //Imprimir ticket
 
         return panelFactura;
     }

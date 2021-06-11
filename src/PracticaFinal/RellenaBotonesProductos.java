@@ -6,7 +6,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
 //Con esta clase rellenaremos los botones de la clase MiBotonProducto con los nombres
+
 public class RellenaBotonesProductos {
 
     public static List<Producto> rellenarBotones() throws IOException {
@@ -22,6 +24,7 @@ public class RellenaBotonesProductos {
         }
         return salida;
     }
+
 }
 
 
