@@ -62,7 +62,7 @@ public class PanelFactura  {
         areaDeTexto = new JTextArea(3,2);
         JButton ticket = new JButton("Tiquet");
 
-        String s= getAreaDeTexto().getText();
+        String s= areaDeTexto.getText();
         ticket.addActionListener(e -> {imprimirTicket(s);}); //Imprimir ticket
 
         panelFactura.add(areaDeTexto);
